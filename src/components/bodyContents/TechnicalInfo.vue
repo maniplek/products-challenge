@@ -1,5 +1,5 @@
 <template>
-  <div class="fullcontainer">
+ 
     <div class="container">
       <div>
         <div class="head-title">
@@ -24,10 +24,10 @@
               </tbody>
             </table>
           </div>
-        </div>
+        
         <div class="info-image">
           <img src="../../assets/images/Bitmap.png" alt="Snow" class="infoImage" />
-        </div>
+        </div></div>
       </div>
 
       <div class="organic-cotton">
@@ -56,10 +56,11 @@
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
+
 export default {
   name: "TechnicalInfo",
   data() {
@@ -81,6 +82,7 @@ export default {
 .container {
   padding-left: 108px;
   padding-top: 44px;
+  background: #F5F5F4;
 }
 
 .information {
@@ -152,7 +154,7 @@ margin-top:24px;
 .main-title {
   text-transform: uppercase;
   text-decoration: underline;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 34px;
   letter-spacing: 2px;
 
@@ -170,22 +172,41 @@ margin-top:24px;
 }
 
 @media screen and (max-width: 666px) {
-  .fullcontainer {
-    display: block;
-    width: 100%;
-  }
   .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding-left: 10px;
+    padding-right:10px
   }
-  .infoImage{
+  .info-image{
     width: 100%;
+    padding-left:0;
   }
   .organic-cotton{
     display: flex;
     flex-direction: column-reverse;
+    padding-right: 0;
+  }
+  .information{
+    width: 100%;
+  }
+  .organic-cotton-image{
+    width: 100%;
+  }
+  .organic-cotton-section{
+    width:100%;
+  }
+  .organic-title{
+   padding-right: 0;
+   text-align: center;
+  }
+  .organic-text{
+    text-align: center;
+  }
+  .table{
+        display: flex;
+width: 100%;
+    padding-top: 10px;
   }
 }
 </style>

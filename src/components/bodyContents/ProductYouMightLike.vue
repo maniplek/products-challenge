@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <p>Hello</p>
+
   </div>
 </template>
 
@@ -102,7 +102,6 @@ export default {
 .slider-container {
   padding: 64px 0px 64px 110px;
   background: #edeae6;
-  height: 300px;
   overflow: hidden;
 }
 
@@ -114,10 +113,18 @@ export default {
   padding-top: 2px;
   position: relative;
 }
+
+.slide:hover > .overlay {
+  opacity: 1;
+} 
+
+.slide:hover > .left-right-icons {
+  opacity: 1;
+} 
+
 .image-slide {
   display: flex;
   gap: 10px;
-  height: 505.46px;
   overflow: hidden;
 }
 .tilte {
@@ -144,7 +151,7 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 22%;
   transform: translateY(-10);
 }
 
@@ -152,23 +159,16 @@ export default {
   width: 20px;
   height: 20px;
 }
-.left-right-icons:hover {
-  opacity: 1;
-}
+
 .overlay {
   background: white;
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
   bottom: 0;
   opacity: 0;
   height: 50%;
   transform: translateY(-10);
-}
-
-.overlay:hover {
-  opacity: 1;
 }
 
 .colors-sections {

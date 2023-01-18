@@ -260,13 +260,20 @@ export default {
 }
 
 @media screen and (max-width: 666px) {
+  .product-image{
+    width: 100%;
+
+  }
+  .product-photo{
+    width: 100%;
+  }
   .product {
     display: flex;
     flex-direction: column;
   }
   .products-container{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 </style>

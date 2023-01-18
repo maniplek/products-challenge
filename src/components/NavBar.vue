@@ -50,7 +50,6 @@ export default {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
-  padding-bottom: 30px;
   padding-right: 38.75px;
 }
 .logo {
@@ -66,7 +65,6 @@ export default {
 
   .nav-options {
     width: 80%;
-    padding-bottom: 30px;
   }
 
 .item-selection {

@@ -2,8 +2,8 @@
   <div class="container">
     <div class="header-logo">
       <div class="header-log-container">
-        <img src="../assets/logos/group.logo.svg" alt=""  class="mobile-logo"/>
-        <img src="../assets/logos/martineli-logo.svg" class="desktop-logo"/>
+        <img src="../assets/logos/group.logo.svg" alt="" class="mobile-logo" />
+        <img src="../assets/logos/martineli-logo.svg" class="desktop-logo" />
       </div>
     </div>
 
@@ -48,7 +48,7 @@ export default {
   gap: 50px;
   padding: 3px;
   display: flex;
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 .login {
   display: flex;
@@ -75,51 +75,48 @@ export default {
 .icon {
   padding-right: 13px;
 }
-.header-log-container{
-  margin:5px;
+.header-log-container {
+  margin: 5px;
 }
-.mobile-logo{
-display: none;
+.mobile-logo {
+  display: none;
 }
 
 @media screen and (max-width: 666px) {
   .container {
     padding-right: 0;
     padding-right: 0;
-
   }
-
-.des
+  .desktop-logo {
+    display: none;
+  }
+  .mobile-logo{
+    display: block;
+  }
   .header-logo {
     height: 100%;
     padding-left: 0;
     display: block;
   }
-  .desktop-logo{
-    display: none;
-  }
-
   .header-log-container {
     padding-top: 5px;
   }
   .login-section {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 245px;
+    padding-left: 0;
+    padding-right: 0;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 
   .icon {
-    padding-right: 2rem;
+    padding-right: 0px;
   }
 
   .login-title {
     display: none;
   }
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+
+
 }
 </style>

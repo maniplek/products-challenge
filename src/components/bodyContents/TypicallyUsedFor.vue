@@ -73,8 +73,6 @@ export default {
   color: #1e1e1e;
 }
 .mostusedIcons {
-  display: flex;
-  justify-content: space-between;
   padding-top: 56px;
   padding-bottom: 80px;
 }
@@ -93,6 +91,10 @@ export default {
   align-items: center;
   flex-direction: column;
 }
+.all-icons{
+  display: flex;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 666px) {
   .container {
@@ -100,6 +102,7 @@ export default {
     width: 100%;
   }
   .mostusedIcons {
+  
     display: flex;
     flex-direction: column;
   }
@@ -120,6 +123,10 @@ export default {
   .image{
     width: 10%;
   }
+  .all-icons{
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
-<!-- rgba(30, 30, 30, 0.1); -->
+

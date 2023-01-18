@@ -1,48 +1,40 @@
 <template>
-  <div class="service-container">
-    <h2>{{ service.title }}</h2>
-    <div
-      class="service-content"
-      :key="content"
-      v-for="content in service.contents"
-    >
-      {{ content }}
-    </div>
+  <div class="container">
+    <h4 class="title service-element">{{service.title.toUpperCase()}}</h4>
+    <div class="service-element" :key="element" v-for="element in service.contents">{{element}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Service",
+  name: "Services",
   props: {
-    service: Object,
-  },
-};
+    service: Object
+  }
+}
 </script>
 
 <style scoped>
-h2 {
-  color: white;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.service-content{
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 28px;
-display: flex;
-align-items: center;
-letter-spacing: 2px;
-color: #FFFFFF
-}
+  .title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .service-element {
+    font-size: 12px;
+    line-height: 28px;
+    padding: 5px;
+  }
+
+  @media screen and (max-width: 666px) {
+    .container {
+    flex-basis: 50%;
+    padding: 0px;
+  }
+  .service-element {
+    padding: 3px;
+  }
+  }
+
 </style>
