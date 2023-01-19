@@ -189,6 +189,8 @@ margin-top:24px;
   }
   .information{
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .organic-cotton-image{
     width: 100%;

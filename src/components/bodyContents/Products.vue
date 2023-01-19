@@ -69,10 +69,6 @@ export default {
   name: "Products",
   components: {},
   data: () => ({
-    // imageUrl: require("../../assets/images/Captura-de-pantalla-las.png"),
-
-    // previousIcon: 'fas fa-arrow-left',
-    // nextIcon: 'fas fa-arrow-right',
     services: [
       {
         title: "SETTORI",

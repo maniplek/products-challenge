@@ -40,9 +40,7 @@ padding: 3px 19.75px 3px 118.75px ;
 
 }
 .icon{
-    padding-right: 15px;
-    width: 10px;
-    height: auto;
+
 
 }
 
@@ -55,5 +53,19 @@ padding: 3px 19.75px 3px 118.75px ;
 .back:hover{
 cursor: pointer;
 }
-  
+  @media screen and (max-width: 666px) {
+
+  .icon{
+    padding-right: 0px;
+    width: 10%;
+   
+}
+
+   .back-section{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+   }
+
+}
 </style>

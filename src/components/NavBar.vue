@@ -53,10 +53,9 @@ export default {
   padding-right: 38.75px;
 }
 .logo {
-  padding-left: 80px;
-  padding-top: 10px;
-  padding-bottom: 90px;
-  width: 1%;
+     padding-top: 10px;
+    padding-bottom: 90px;
+    width: 2%;
 }
 .image-log {
   height: auto;
@@ -80,13 +79,13 @@ export default {
   .item-selection {
     padding: 0px;
     flex-direction: column;
-    flex-basis: 10%;
+    flex-basis: 60%;
  
   }
 
   .logo {
-    padding: 5px;
-    flex-basis: 10%;
+    padding: 0px;
+    flex-basis: 40%;
     display: flex;
     align-items: center;
 
