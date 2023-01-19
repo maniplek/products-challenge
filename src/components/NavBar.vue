@@ -39,7 +39,7 @@ export default {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  height: 70px;
+  height: 98px;
 }
 .menu {
   font-family: "Montserrat";
@@ -58,8 +58,7 @@ export default {
     width: 2%;
 }
 .image-log {
-  height: auto;
-  width: 1000%;
+
 }
 
   .nav-options {
@@ -91,13 +90,13 @@ export default {
 
   }
   .image-log{
-    height: 180%;
+    
   }
 
   .nav-container {
     padding: 20px 0px;
     font-size: 18px;
- 
+ height: 98px;
   }
 
 .nav-options{
