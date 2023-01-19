@@ -111,6 +111,7 @@ export default {
 
   .icon {
     padding-right: 0px;
+    width: 0;
   }
 
   .login-title {
