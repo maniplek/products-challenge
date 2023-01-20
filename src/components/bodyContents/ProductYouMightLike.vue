@@ -1,7 +1,7 @@
 <template>
   <div class="slider-container">
     <div class="title-container">
-      <h2 class="tilte">Products you might like</h2>
+      <h2 class="title">Products you might like</h2>
       <div class="next-prev-image">
         <img
           class="prev-image"
@@ -48,16 +48,42 @@
         <img :src="image.src" :alt="image.alt" />
       </div>
     </div>
-
-
+    <div class="nav-container">
+      <div class="nav-btn left">
+        <img
+            class="product-image"
+            src="../../assets/icons/Left.svg"
+            alt="Snow"
+        />
+      </div>
+      <div class="nav-labels">
+        <p class="nav active">1</p>
+        <p class="nav">2</p>
+        <p class="nav">3</p>
+        <p class="nav">4</p>
+      </div>
+      <div class="nav-btn right">
+        <img
+            class="product-image"
+            src="../../assets/icons/Right.svg"
+            alt="Snow"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import ScrollNav from "../ScrollNav.vue";
+
 export default {
   name: "ProductYouMightLike",
+  components: {
+    ScrollNav,
+  },
   data() {
     return {
+      // isMobile: window.matchMedia("(max-width: 768px)").matches,
       images: [
         {
           src: require("../../assets/images/Captura-de-pantalla1.png"),
@@ -83,7 +109,16 @@ export default {
       currentSlide: 0,
     };
   },
+
+  // mounted() {
+  //   window.addEventListener("resize", this.handleResize);
+  // },
+
   methods: {
+    handleResize() {
+      this.isMobile = window.matchMedia("(max-width: 666px)").matches;
+    },
+
     prevSlide() {
       if (this.currentSlide > 0) {
         this.currentSlide--;
@@ -100,45 +135,45 @@ export default {
 
 <style scoped>
 .slider-container {
-    padding: 64px 0px 64px 90px;
-    background: #edeae6;
-    overflow: hidden;
+  padding: 64px 0px 64px 90px;
+  background: #edeae6;
+  overflow: hidden;
 }
 
 .slide {
-width: 100%;
-    float: left;
-    position: relative;
+  width: 100%;
+  float: left;
+  position: relative;
 }
 
 .slide:hover > .overlay {
   opacity: 1;
-} 
+}
 
 .slide:hover > .left-right-icons {
   opacity: 1;
-} 
+}
 
 .image-slide {
-     display: flex;
-    gap: 10px;
-    overflow: hidden;
-    flex-direction: space-between;
-    flex-direction: row;
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .title-container {
   display: flex;
   justify-content: space-between;
 }
-.tilte{
-font-family: 'Bodoni Moda';
-font-style: normal;
-font-weight: 700;
-font-size: 33px;
-line-height: 50px;
-padding-bottom: 10px;
-color: #000000;
+.title {
+  font-family: "Bodoni Moda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 50px;
+  padding-bottom: 10px;
+  color: #000000;
 }
 .next-icon {
   float: left;
@@ -171,16 +206,17 @@ color: #000000;
   position: absolute;
   left: 0;
   right: 0;
+  padding-top: 30px;
   bottom: 0;
   opacity: 0;
   height: 50%;
-  transform: translateY(-10);
 }
 
 .colors-sections {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  align-items: center;
+  width: 50%;
   margin: auto;
   font-size: 14px;
   padding-bottom: 1px;
@@ -193,7 +229,8 @@ color: #000000;
 }
 
 .overlay-title {
-  padding: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .red {
@@ -213,7 +250,11 @@ color: #000000;
 }
 
 .next-prev-image {
-  padding-right: 20px;
+  padding-right: 6%;
+}
+
+.nav-container {
+  display: none;
 }
 
 @media screen and (max-width: 666px) {
@@ -224,12 +265,68 @@ color: #000000;
     display: none;
   }
   .product-image {
-    display:block;
+    display: block;
     width: 100%;
   }
-  .slider-container{
-    padding-left: 10px;
-    padding-right: 10px;
+  .slider-container {
+    padding-left: 16px;
   }
+  .image-loop-on-mobile {
+    display: block;
+  }
+.title{
+      font-size: 50px;
+      padding-bottom: 24px;
+}
+.slide > .overlay {
+  opacity: 1;
+}
+
+.slide > .left-right-icons {
+  opacity: 1;
+}
+
+.overlay {
+  height: 25%;
+  padding-top: 20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-right: 16px;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+}
+
+.nav-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-labels {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: #1E1E1E;
+  opacity: 0.3;
+}
+
+.nav.active {
+  opacity: 1;
+}
+
 }
 </style>

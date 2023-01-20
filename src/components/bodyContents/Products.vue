@@ -2,6 +2,7 @@
   <div class="products-container">
     <div class="product">
       <div class="product-photo">
+        <h1 class="product-title-mobile">Canapone</h1>
         <img
           class="product-image"
           src="../../assets/images/Captura-de-pantalla-las.png"
@@ -34,15 +35,39 @@
           <h3 class="color-selection-title">Color selection</h3>
 
           <div>
-            <div class="color">
-              <div class="color one"></div>
-              <div class="color two"></div>
-              <div class="color three"></div>
-              <div class="color four"></div>
-              <div class="color five"></div>
-              <div class="color six"></div>
-              <div class="color seven"></div>
-              <div class="color eight"></div>
+            <div class="colors">
+              <div class="color-container">
+                <div class="color one"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color two"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color three"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color four"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color five"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color six"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color seven"></div>
+                <span>Violoncello 2212</span>
+              </div>
+              <div class="color-container">
+                <div class="color eight"></div>
+                <span>Violoncello 2212</span>
+              </div>
 
               <p class="more-colors">+20</p>
             </div>
@@ -126,6 +151,9 @@ export default {
   line-height: 85px;
   color: #1e1e1e;
 }
+.product-title-mobile {
+  display: none;
+}
 
 .product-text {
   font-family: "Raleway";
@@ -135,21 +163,19 @@ export default {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: rgba(30, 30, 30, 0.75);
-  width: 400px;
   padding-bottom: 10px;
 }
 .link {
-
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.03em;
-    text-decoration-line: underline;
-    color: #1e1e1e;
-    padding-top: 5px;
-    text-decoration-color: #1e1e1e;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #1e1e1e;
+  padding-top: 5px;
+  text-decoration-color: #1e1e1e;
 }
 
 .product-image {
@@ -159,7 +185,7 @@ export default {
 }
 
 .color-selection {
-     padding-top: 32px;
+  padding-top: 32px;
 }
 .color-selection-title {
   font-family: "Raleway";
@@ -173,7 +199,7 @@ export default {
   text-transform: uppercase;
   color: #000000;
 }
-.more-colors{
+.more-colors {
   text-decoration: underline;
 }
 
@@ -192,39 +218,72 @@ export default {
 }
 
 .btn {
-display: flex;
-    padding-left: 5%;
-    gap: 5%;
-    padding-bottom: 20px;
+  display: flex;
+  padding-left: 5%;
+  gap: 5%;
+  padding-bottom: 20px;
 }
 .btn-log-in {
-    width: 150px;
-    height: 45px;
-    color: #ffffff;
-    border-radius: 80px;
-    background: #1e1e1e;
-    border-radius: 80px;
+  width: 150px;
+  height: 45px;
+  color: #ffffff;
+  border-radius: 80px;
+  background: #1e1e1e;
+  border-radius: 80px;
 }
 .btn-Sign-up {
-     width: 150px;
-    height: 45px;
-    background: #ffffff;
-    border-radius: 80px;
-  
-    border: 1px solid black;
+  width: 150px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 80px;
+
+  border: 1px solid black;
+}
+
+.colors {
+  display: flex;
+  gap: 16px;
+  padding: 3px;
+}
+
+.color-container {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background: #fff;
+  margin-bottom: 20px;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .color {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin: 1px;
-  padding: 3px;
-  height: 18px;
-  width: 276px;
+  height: 24px;
+  width: 24px;
   border-radius: 100%;
-  margin-bottom: 20px;
 }
+
+.color-container span {
+  font-size: 8px;
+  font-weight: 700;
+  margin-left: 4px;
+  margin-right: 4px;
+  white-space: nowrap;
+  display: none;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+
+.color-container:hover {
+  height: 25px;
+  padding: 2px;
+}
+
+.color-container:hover > span {
+  display: block;
+}
+
 .one {
   background: #4e6071;
   border: 2px solid #d8d8d8;
@@ -244,6 +303,7 @@ display: flex;
   border: 1px solid #d8d8d8;
   border: 2px solid #d8d8d8;
 }
+
 .five {
   background: #80857a;
   border: 2px solid #d8d8d8;
@@ -275,8 +335,8 @@ display: flex;
   transform: translateY(-10);
 }
 .left-right-icons img {
-  width: 60px;
-  height: 26px;
+  width: 30px;
+  height: 40px;
 }
 
 .product-photo {
@@ -286,6 +346,7 @@ display: flex;
 @media screen and (max-width: 666px) {
   .product-image {
     width: 100%;
+    margin-bottom: 5%;
   }
   .product-photo {
     width: 100%;
@@ -295,8 +356,37 @@ display: flex;
     flex-direction: column;
   }
   .products-container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  .product-title-mobile {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 85px;
+    color: #1e1e1e;
+  }
+  .product-title {
+    display: none;
+  }
+  .left-right-icons img {
+    width: 40px;
+    height: 50px;
+  }
+  .left-right-icons {
+    left: 1%;
+    right: -11%;
+  }
+  .color-selection-title {
+    padding-bottom: 5%;
+  }
+  .more-colors {
+    padding: 2%;
   }
 }
 </style>

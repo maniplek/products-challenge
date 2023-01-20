@@ -170,11 +170,10 @@ line-height: 24px;
 }
 .main-title {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 34px;
     letter-spacing: 2px;
     border-bottom: 1px solid black;
-    width: 29%;
 
 }
 .horizontal-line {
@@ -182,7 +181,7 @@ line-height: 24px;
 }
 
 .head-title {
-  display: block;
+  display: flex;
   width: auto;
 }
 .organic-cotton-image {
@@ -193,13 +192,17 @@ line-height: 24px;
   .container {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right:10px
+    padding-left: 16px;
+    padding-right:16px
   }
   .info-image{
     width: 100%;
     padding-left:0;
   }
+
+  .info-image img{
+width: auto;
+}
   .organic-cotton{
     display: flex;
     flex-direction: column-reverse;
@@ -215,18 +218,29 @@ line-height: 24px;
   }
   .organic-cotton-section{
     width:100%;
+       padding-right: 0;
   }
   .organic-title{
-   padding-right: 0;
-   text-align: center;
-  }
-  .organic-text{
-    text-align: center;
+       padding-right: 0;
+    margin-bottom: 10%;
+    font-size: 40px;
   }
   .table{
-        display: flex;
-width: 100%;
+    display: flex;
+    width: 100%;
     padding-top: 10px;
+    padding-right: 1%;
+    margin-bottom: 10%;
+  }
+  .table-row tr td:last-child {
+    text-align: right;
+  }
+  .main-title{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .oraganic-img{
+        padding-top: 35px;
   }
 }
 </style>
