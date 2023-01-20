@@ -36,19 +36,17 @@ export default {
 
 .back-section{
 display: flex;
-padding: 3px 19.75px 3px 118.75px ;
-
+    padding: 0 19.75px 0 9%;
+    align-items: center;
+    gap: 0.5%;
 }
-.icon{
-
-
-}
-
 .icon:hover{
   cursor: pointer;
 }
 .back{
    text-decoration-line: underline;
+   color: #1E1E1E;
+   text-decoration-color:DarkGray;
 }
 .back:hover{
 cursor: pointer;

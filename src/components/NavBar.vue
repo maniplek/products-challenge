@@ -1,8 +1,6 @@
 <template>
   <div class="nav-container">
-    <div class="logo">
-      <img src="../assets/logos/brignoli.svg" class="image-log" alt=" " />
-    </div>
+    <img src="../assets/logos/brignolilogo.svg" class="image-log" alt=" " />
 
     <div class="item-selection">
       <div class="menu">CATALOG</div>
@@ -15,8 +13,7 @@
 </template>
 
 <script>
-
-import ScrollNav from './ScrollNav.vue'
+import ScrollNav from "./ScrollNav.vue";
 
 export default {
   name: "NavBar",
@@ -24,7 +21,18 @@ export default {
     ScrollNav,
   },
   data() {
-    return {options: ["SOLUTIONS", "NEWS", "PROJECTS", "ABOUT", "PRESS", "CONTACT", "TEXTURES", "INSPIRATION"]};
+    return {
+      options: [
+        "SOLUTIONS",
+        "NEWS",
+        "PROJECTS",
+        "ABOUT",
+        "PRESS",
+        "CONTACT",
+        "TEXTURES",
+        "INSPIRATION",
+      ],
+    };
   },
 };
 </script>
@@ -32,46 +40,37 @@ export default {
 <style scoped>
 @import url("https://fonts.cdnfonts.com/css/montserrat");
 .nav-container {
-  width: 100%;
   background-color: #a3846b;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  height: 98px;
 }
-.menu {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  display: flex;
-  justify-content: space-between;
-  color: #ffffff;
-  padding-right: 38.75px;
-}
-.logo {
-     padding-top: 10px;
-    padding-bottom: 90px;
-    width: 2%;
-}
-.image-log {
-
+.image-log{
+      width: 22%;
+    padding-left: 80px;
 }
 
-  .nav-options {
-    width: 80%;
-  }
+.nav-options {
+  width: 80%;
+}
 
 .item-selection {
-    padding: 19px 80px;
-    height: 72px;
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 19px 50px;
+  height: 72px;
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu{
+      font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 666;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
 }
 
 @media screen and (max-width: 666px) {
@@ -79,28 +78,10 @@ export default {
     padding: 0px;
     flex-direction: column;
     flex-basis: 60%;
- 
   }
 
-  .logo {
-    padding: 0px;
-    flex-basis: 40%;
-    display: flex;
-    align-items: center;
-
+  .nav-options {
+    flex-basis: 10%;
   }
-  .image-log{
-    
-  }
-
-  .nav-container {
-    padding: 20px 0px;
-    font-size: 18px;
- height: 98px;
-  }
-
-.nav-options{
-  flex-basis: 10%;
 }
-  }
 </style>

@@ -17,7 +17,7 @@
               </thead>
               <tbody>
                 <tr v-for="item in items" :key="item.id">
-                  <td>{{ item.name }}</td>
+                  <td class="first-col">{{ item.name }}</td>
 
                   <td>{{ item.descrption }}</td>
                 </tr>
@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 .container {
-  padding-left: 108px;
+  padding-left: 90px;
   padding-top: 44px;
   background: #F5F5F4;
 }
@@ -91,22 +91,21 @@ export default {
 }
 
 .info-image {
-  width: 50%;
-  height: 300px;
-
-  padding-left: 30px;
+    width: 50%;
+    height: 300px;
+    padding-left: 55px;
 }
 
 .info-image img {
-margin-top:24px;
+        margin-bottom: 9px;
+    width: 100%;
 }
 
 .organic-cotton {
-  display: flex;
-  justify-content: space-between;
-  gap: 5%;
-  padding-right: 108px;
-  padding-top: 108px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    padding-top: 80px;
 }
 .oraganic-img {
   width: 100%;
@@ -114,29 +113,39 @@ margin-top:24px;
   padding-bottom: 64px;
 }
 .organic-cotton-section {
-  padding-right: 20px;
-  width: 50%;
+    padding-right: 53px;
+    width: 50%;
 }
 .organic-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.03em;
-  color: #1e1e1e;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #1E1E1E;
 }
 .organic-title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  color: #1e1e1e;
-  padding-top: 70px;
-  padding-right: 172px;
+    padding-top: 70px;
+    padding-right: 164px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+    color: #1E1E1E;
 }
 .table {
-  padding-right: 20px;
-  display: flex;
-  width: 50%;
-  padding-top: 10px;
+    padding-right: 136px;
+    display: flex;
+    width: 50%;
+    padding-top: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1E1E1E;
 }
 .table-row td {
   border-bottom: 1px solid rgba(30, 30, 30, 0.1);
@@ -151,12 +160,21 @@ margin-top:24px;
   border-spacing: 10px;
   width: 100%;
 }
+
+.first-col{
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+}
 .main-title {
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-size: 20px;
-  line-height: 34px;
-  letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid black;
+    width: 29%;
 
 }
 .horizontal-line {

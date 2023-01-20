@@ -35,16 +35,16 @@
 
           <div>
             <div class="color">
-              <div class="color black"></div>
-              <div class="color red"></div>
-              <div class="color grey"></div>
-              <div class="color green"></div>
-              <div class="color red"></div>
-              <div class="color grey"></div>
-              <div class="color black"></div>
-              <div class="color red"></div>
-              <div class="color grey"></div>
-              <div>+20</div>
+              <div class="color one"></div>
+              <div class="color two"></div>
+              <div class="color three"></div>
+              <div class="color four"></div>
+              <div class="color five"></div>
+              <div class="color six"></div>
+              <div class="color seven"></div>
+              <div class="color eight"></div>
+
+              <p class="more-colors">+20</p>
             </div>
 
             <div class="sign-up">
@@ -109,7 +109,7 @@ export default {
 <style scoped>
 .products-container {
   background: #f5f5f4;
-  padding-left: 108px;
+  padding-left: 88px;
   padding-right: 108px;
   padding-top: 64px;
   padding-bottom: 64px;
@@ -119,7 +119,7 @@ export default {
   justify-content: space-between;
 }
 .product-title {
-  font-family: "Bodoni Moda";
+  font-family: "Bodoni Moda", serif;
   font-style: normal;
   font-weight: 700;
   font-size: 45px;
@@ -136,27 +136,30 @@ export default {
   letter-spacing: 0.03em;
   color: rgba(30, 30, 30, 0.75);
   width: 400px;
+  padding-bottom: 10px;
 }
 .link {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.03em;
-  text-decoration-line: underline;
-  color: #1e1e1e;
-  padding-top: 5px;
+
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: #1e1e1e;
+    padding-top: 5px;
+    text-decoration-color: #1e1e1e;
 }
 
 .product-image {
-  width: 470px;
+  width: 570px;
   height: auto;
-  margin-right: 38px;
+  margin-right: 50px;
 }
 
 .color-selection {
-  padding-top: 15px;
+     padding-top: 32px;
 }
 .color-selection-title {
   font-family: "Raleway";
@@ -169,6 +172,9 @@ export default {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #000000;
+}
+.more-colors{
+  text-decoration: underline;
 }
 
 .sign-up {
@@ -186,54 +192,76 @@ export default {
 }
 
 .btn {
-  display: flex;
-  padding: 1px;
+display: flex;
+    padding-left: 5%;
+    gap: 5%;
+    padding-bottom: 20px;
 }
 .btn-log-in {
-  margin: 20px;
-  width: 150px;
-  height: 35px;
-  color: #ffffff;
-  border-radius: 80px;
-  background: #1e1e1e;
-  border-radius: 80px;
+    width: 150px;
+    height: 45px;
+    color: #ffffff;
+    border-radius: 80px;
+    background: #1e1e1e;
+    border-radius: 80px;
 }
 .btn-Sign-up {
-  margin: 20px;
-  width: 150px;
-  height: 35px;
-  background: #ffffff;
-  border-radius: 80px;
+     width: 150px;
+    height: 45px;
+    background: #ffffff;
+    border-radius: 80px;
+  
+    border: 1px solid black;
 }
 
 .color {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 10%;
-  font-size: 14px;
-  padding-bottom: 15px;
   margin: 1px;
   padding: 3px;
-  height: 10px;
-  width: 15px;
+  height: 18px;
+  width: 276px;
   border-radius: 100%;
   margin-bottom: 20px;
 }
-.red {
-  background-color: rgb(142, 139, 139);
+.one {
+  background: #4e6071;
+  border: 2px solid #d8d8d8;
 }
 
-.grey {
-  background-color: rgb(43, 32, 32);
+.two {
+  background: #7b6350;
+  border: 2px solid #d8d8d8;
 }
 
-.green {
-  background-color: rgb(137, 168, 0);
+.three {
+  background: #a58a71;
+  border: 2px solid #d8d8d8;
 }
 
-.black {
-  background-color: rgb(244, 168, 168);
+.four {
+  border: 1px solid #d8d8d8;
+  border: 2px solid #d8d8d8;
+}
+.five {
+  background: #80857a;
+  border: 2px solid #d8d8d8;
+}
+
+.six {
+  background: #808080;
+  border: 2px solid #d8d8d8;
+}
+
+.seven {
+  background: #9a9ea3;
+  border: 2px solid #d8d8d8;
+}
+
+.eight {
+  background: #bfbfbf;
+  border: 2px solid #d8d8d8;
 }
 
 .left-right-icons {
@@ -247,8 +275,8 @@ export default {
   transform: translateY(-10);
 }
 .left-right-icons img {
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 26px;
 }
 
 .product-photo {
@@ -256,18 +284,17 @@ export default {
 }
 
 @media screen and (max-width: 666px) {
-  .product-image{
+  .product-image {
     width: 100%;
-
   }
-  .product-photo{
+  .product-photo {
     width: 100%;
   }
   .product {
     display: flex;
     flex-direction: column;
   }
-  .products-container{
+  .products-container {
     padding-left: 10px;
     padding-right: 10px;
   }

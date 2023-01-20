@@ -1,10 +1,8 @@
 <template>
   <div class="container">
-    <div class="header-logo">
-      <div class="header-log-container">
-        <img src="../assets/logos/group.logo.svg" alt="" class="mobile-logo" />
-        <img src="../assets/logos/martineli-logo.svg" class="desktop-logo" />
-      </div>
+    <div class="header-log-container">
+      <img src="../assets/logos/group.logo.svg" alt="" class="mobile-logo" />
+      <img src="../assets/logos/martineli-logo.svg" class="desktop-logo" />
     </div>
 
     <div class="login-section">
@@ -12,9 +10,8 @@
         <img class="icon" src="../assets/icons/person.icon.svg" />
         <h3 class="login-title">LOG IN</h3>
       </div>
-      <div class="toggle-menu">
-        <img src="../assets/icons/menu-toggle.svg" alt=" " />
-      </div>
+
+      <img src="../assets/icons/menu-toggle.svg" alt=" " class="toggle-menu" />
     </div>
   </div>
 </template>
@@ -28,14 +25,12 @@ export default {
 <style scoped>
 @import url("https://fonts.cdnfonts.com/css/montserrat");
 .container {
-  width: 100%;
   background-color: #000000;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
-  height: 70px;
 }
 .header-logo {
   display: flex;
@@ -43,27 +38,27 @@ export default {
   height: 70px;
   background-repeat: no-repeat;
 }
+.desktop-logo {
+  width: 80%;
+}
 
 .login-section {
-  gap: 50px;
-  padding: 3px;
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 4%;
+    gap: 20px;
 }
 .login {
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  align-items: center;
 }
 
 .login img {
   position: relative;
-  top: 1.5px;
-  height: 50%;
+  height: 69%;
 }
 .toggle-menu {
-  padding-right: 46.25px;
-  padding-left: 2.5px;
+  width: 20%;
 }
 .login-title {
   font-style: normal;
@@ -73,10 +68,12 @@ export default {
   color: #ffffff;
 }
 .icon {
-  padding-right: 13px;
+  margin-right: 13px;
+  width: 17%;
 }
 .header-log-container {
   margin: 5px;
+  padding-left: 5%;
 }
 .mobile-logo {
   display: none;
@@ -90,7 +87,7 @@ export default {
   .desktop-logo {
     display: none;
   }
-  .mobile-logo{
+  .mobile-logo {
     display: block;
   }
   .header-logo {
@@ -117,7 +114,5 @@ export default {
   .login-title {
     display: none;
   }
-
-
 }
 </style>

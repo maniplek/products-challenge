@@ -33,6 +33,8 @@ export default {
 }
 #app {
   overflow: hidden;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+
 }
 
 

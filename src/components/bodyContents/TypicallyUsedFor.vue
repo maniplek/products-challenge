@@ -60,17 +60,17 @@ export default {
 
 <style scoped>
 .typically-container {
-  padding-left: 108px;
+  padding-left: 90px;
   padding-right: 108px;
   padding-top: 44px;
 }
 .title {
-  font-family: "Bodoni Moda";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  color: #1e1e1e;
+ font-family: "Bodoni Moda";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #1e1e1e;
 }
 .mostusedIcons {
   padding-top: 56px;
@@ -87,13 +87,26 @@ export default {
   align-items: center;
 }
 .icons-name {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 0.5px solid rgba(30, 30, 30, 0.2);
+    border-spacing: 2;
+    padding-right: 40px;
+    height: 70px;
 }
+
+.icons-name:after {
+    display: none;
+}
+
 .all-icons{
   display: flex;
   justify-content: space-between;
+}
+
+.image{
+  
 }
 
 @media screen and (max-width: 666px) {

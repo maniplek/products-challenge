@@ -100,18 +100,15 @@ export default {
 
 <style scoped>
 .slider-container {
-  padding: 64px 0px 64px 110px;
-  background: #edeae6;
-  overflow: hidden;
+    padding: 64px 0px 64px 90px;
+    background: #edeae6;
+    overflow: hidden;
 }
 
 .slide {
-  width: 100%;
-  height: 300px;
-  float: left;
-  overflow: hidden;
-  padding-top: 2px;
-  position: relative;
+width: 100%;
+    float: left;
+    position: relative;
 }
 
 .slide:hover > .overlay {
@@ -123,16 +120,25 @@ export default {
 } 
 
 .image-slide {
-  display: flex;
-  gap: 10px;
-  overflow: hidden;
+     display: flex;
+    gap: 10px;
+    overflow: hidden;
+    flex-direction: space-between;
+    flex-direction: row;
 }
-.tilte {
-  padding-bottom: 10px;
-}
+
 .title-container {
   display: flex;
   justify-content: space-between;
+}
+.tilte{
+font-family: 'Bodoni Moda';
+font-style: normal;
+font-weight: 700;
+font-size: 33px;
+line-height: 50px;
+padding-bottom: 10px;
+color: #000000;
 }
 .next-icon {
   float: left;
