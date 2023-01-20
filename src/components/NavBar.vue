@@ -48,7 +48,7 @@ export default {
   overflow: hidden;
 }
 .image-log{
-      width: 22%;
+      width: 20%;
     padding-left: 80px;
 }
 
