@@ -19,18 +19,23 @@ export default {
     font-size: 12px;
     font-weight: 700;
     line-height: 28px;
+    font-family: Raleway;
+    letter-spacing: 2px;
   }
 
   .service-element {
     font-size: 12px;
     line-height: 28px;
     padding: 5px;
+    font-family: Raleway;
+    letter-spacing: 2px;
   }
 
   @media screen and (max-width: 666px) {
     .container {
     flex-basis: 50%;
     padding: 0px;
+    padding-top: 32px;
   }
   .service-element {
     padding: 3px;

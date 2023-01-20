@@ -43,10 +43,10 @@ export default {
 }
 
 .login-section {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 4%;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4%;
+  gap: 20px;
 }
 .login {
   display: flex;
@@ -83,6 +83,7 @@ export default {
   .container {
     padding-right: 0;
     padding-right: 0;
+    background: #1E1E1E;
   }
   .desktop-logo {
     display: none;
@@ -95,12 +96,15 @@ export default {
     padding-left: 0;
     display: block;
   }
+  .toggle-menu{
+        width: 40%;
+  }
   .header-log-container {
     padding-top: 5px;
   }
   .login-section {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 8%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -108,7 +112,7 @@ export default {
 
   .icon {
     padding-right: 0px;
-    width: 0;
+    width: 100%;
   }
 
   .login-title {

@@ -2,7 +2,7 @@
   <div class="list-container">
   <i @click="scrollLeft" class="fa fa-chevron-left" aria-hidden="true"></i>
   <ul id="list">
-    <li :key="option" v-for="option in options">
+    <li :key="option" v-for="(option, index) in options"  v-bind:class="{ active: index === 0 }">
       {{ option }}
     </li>
   </ul>
@@ -22,14 +22,14 @@ export default {
       e.preventDefault();
       const scroller = document.getElementById('list');
       const currentScrollValue = scroller.scrollLeft
-      scroller.scrollLeft += 200
+      scroller.scrollLeft -= 200
       this.disableScrollIcon('left', currentScrollValue)
     },
     scrollRight(e) {
       e.preventDefault();
       const scroller = document.getElementById('list');
       const currentScrollValue = scroller.scrollLeft
-      scroller.scrollLeft -= 200
+      scroller.scrollLeft += 200
       this.disableScrollIcon('right', currentScrollValue)
     },
     disableScrollIcon(side, compare) {
@@ -83,5 +83,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  li.active {
+    text-decoration: underline;
   }
 </style>

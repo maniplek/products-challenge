@@ -1,6 +1,6 @@
 <template>
   <div class="client-container">
-    <img :key="logo" v-for="logo in logos" :src="logo" />
+    <img class="client" :key="logo" v-for="logo in logos" :src="logo" />
   </div>
 </template>
 
@@ -22,18 +22,20 @@ export default {
 <style scoped>
 .client-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
   margin: 2rem 0rem;
   opacity: 0.5;
 }
 
 @media screen and (max-width: 666px) {
   .client-container {
-    
+    flex-wrap: wrap;
+    margin-bottom: -8px;
   }
 
-  .container img {
+  .client {
+    margin-bottom: 40px;
   }
 }
 </style>

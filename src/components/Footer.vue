@@ -2,9 +2,11 @@
   <div class="footer-container">
     <div class="footer-container-1">
       <div class="section-one">
-        <div class="section-one-logo"></div>
+        <div class="section-logo">
+          <div class="section-one-logo"></div>
+          <a class="contacti">contacti</a>
+        </div>
         <div class="top-right">
-          <a class="top-right-item contacti hide-on-mobile">contacti</a>
           <img
             class="insta top-right-item"
             src="../assets/logos/instagram.logo.svg"
@@ -32,13 +34,13 @@
                     </div>
       <div class="separator" />
       <Clients />
-      <div class="separator hide-on-mobile" />
-      <div class="footer-bottom-part hide-on-mobile">
+      <div class="separator" />
+      <div class="footer-bottom-part">
         <div>
           <a class="link privacy">Privacy</a>
           <a class="link cookie">Cookie policy</a>
         </div>
-        <div>
+        <div class="copyright">
           Martinelli Ginetto S.p.A - C.F. e Partita Iva 03403660164 Cap.Sociale
           10.000.000 I.v. REA: BG – 375519
         </div>
@@ -105,6 +107,14 @@ export default {
   width: 100%;
 }
 
+.section-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 10px;
+}
+
 .section-one-logo {
   background-image: url("../assets/logos/martineli-ginetto.logo.svg");
   min-width: 220px;
@@ -129,6 +139,11 @@ export default {
 
 .contacti {
   text-decoration: underline;
+  font-size: 11px;
+  font-weight: 300;
+  font-family: Raleway;
+  line-height: 28px;
+  letter-spacing: 2px;
 }
 
 .services {
@@ -141,8 +156,11 @@ export default {
 .services-description {
   flex-basis: 20%;
   font-size: 12px;
+  font-weight: 300;
+  font-family: Raleway;
   line-height: 20px;
   padding: 5px;
+  letter-spacing: 2px;
 }
 
 .separator {
@@ -159,6 +177,11 @@ export default {
   font-size: 11px;
   line-height: 28px;
   font-weight: 400;
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+}
+.copyright {
+  line-height: 16px;
 }
 .link {
   text-decoration: underline;
@@ -173,6 +196,19 @@ export default {
 }
 
 @media screen and (max-width: 666px) {
+  .section-one {
+    align-items: flex-start;
+  }
+  .section-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 32px;
+  }
+
+  .contacti {
+    margin-top: 32px;
+  }
+
   .section-one-logo {
     min-width: 180px;
     height: 40px;
@@ -196,13 +232,20 @@ export default {
 
   .services {
     flex-wrap: wrap;
+    padding-bottom: 32px;
   }
 
   .services-description {
     flex-basis: 100%;
-    font-size: 12px;
-    line-height: 20px;
     padding: 5px;
+  }
+
+  .footer-bottom-part {
+    flex-wrap: wrap-reverse;
+  }
+
+  .copyright {
+    margin-bottom: 32px;
   }
 
   .hide-on-mobile {

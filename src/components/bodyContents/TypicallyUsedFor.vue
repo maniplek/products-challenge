@@ -4,7 +4,12 @@
       <h3 class="title">Typically used for</h3>
       <div class="mostusedIcons">
         <div class="all-icons">
-          <div class="icons-name" v-for="(image, index) in images" :key="index">
+          <div
+            class="icons-name"
+            v-for="(image, index) in images"
+            :key="index"
+            :class="{ border: index !== images.length - 1, 'border-mobile': index !== 0 }"
+          >
             <img :src="image.src" :alt="image.alt" class="image" />
             <P
               :v-for="(image, index) in images"
@@ -65,12 +70,12 @@ export default {
   padding-top: 44px;
 }
 .title {
- font-family: "Bodoni Moda";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
-    color: #1e1e1e;
+  font-family: "Bodoni Moda";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+  color: #1e1e1e;
 }
 .mostusedIcons {
   padding-top: 56px;
@@ -87,26 +92,28 @@ export default {
   align-items: center;
 }
 .icons-name {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-right: 0.5px solid rgba(30, 30, 30, 0.2);
-    border-spacing: 2;
-    padding-right: 40px;
-    height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-spacing: 2;
+  padding-right: 40px;
+  height: 70px;
+}
+
+.border {
+  border-right: 0.5px solid rgba(30, 30, 30, 0.2);
 }
 
 .icons-name:after {
-    display: none;
+  display: none;
 }
 
-.all-icons{
+.all-icons {
   display: flex;
   justify-content: space-between;
 }
 
-.image{
-  
+.image {
 }
 
 @media screen and (max-width: 666px) {
@@ -115,31 +122,35 @@ export default {
     width: 100%;
   }
   .mostusedIcons {
-  
     display: flex;
     flex-direction: column;
   }
   .image-name {
-  padding-left: 20px;
+    padding-left: 20px;
   }
   .icons-name {
     display: flex;
     flex-direction: row;
-    border-top: 1px solid rgba(30, 30, 30, 0.2);
     padding: 10px;
-    
   }
-  .typically-container{
+
+  .border-mobile {
+    border-top: 1px solid rgba(30, 30, 30, 0.2);
+  }
+  .typically-container {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .image{
+  .image {
     width: 10%;
   }
-  .all-icons{
+  .all-icons {
     display: flex;
     flex-direction: column;
   }
+  .title {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 </style>
-

@@ -55,7 +55,7 @@ cursor: pointer;
 
   .icon{
     padding-right: 0px;
- 
+ padding-left: 3%;
    
 }
 

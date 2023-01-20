@@ -65,7 +65,7 @@ export default {
   align-items: center;
 }
 .menu{
-      font-family: 'Montserrat';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 666;
     font-size: 20px;
@@ -82,6 +82,12 @@ export default {
 
   .nav-options {
     flex-basis: 10%;
+    padding-bottom: 5%;
+       
   }
+  .image-log{
+    width: 30%;
+    padding-left: 0;
+}
 }
 </style>
